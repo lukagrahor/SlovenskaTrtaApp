@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">SlovenskaTrtaApp</string>
     <string name="seznam_vrst_trt">Seznam vrst trt</string>
+    <string name="id">ID</string>
+    <string name="vrsta_trte">Vrsta trte</string>
+    <string name="vnesi_vrsto_trte">Vnesi vrsto trte</string>
+    <string name="textview">TextView</string>
 </resources>

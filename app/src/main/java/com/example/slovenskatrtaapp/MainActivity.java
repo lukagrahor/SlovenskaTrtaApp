@@ -25,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
     private RequestQueue requestQueue;
     private TextView trte;
     private String url = "https://slovenskatrta-is.azurewebsites.net/api/v1/Trte";
+    public static final String EXTRA_MESSAGE = "slovenskatrtaapp.MESSAGE";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -77,4 +78,11 @@ public class MainActivity extends AppCompatActivity {
             Log.d("REST error", error.getMessage());
         }
     };
+
+    public void addTrtaActivity (View view) {
+        Intent intent = new Intent(this,AddTrtaActivity.class);
+        String message = "Dodaj trto v seznam.";
+        intent.putExtra(EXTRA_MESSAGE, message);
+        startActivity(intent);
+    }
 }
