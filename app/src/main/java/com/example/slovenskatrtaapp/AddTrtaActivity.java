@@ -39,10 +39,6 @@ public class AddTrtaActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_trta);
-        id = (EditText) findViewById(R.id.teID);
-        //string_id= id.getText().toString();
-        //koncni_id=Integer.parseInt(string_id);
-
         vrsta = (EditText) findViewById(R.id.teVrsta);
         status = (TextView) findViewById(R.id.status);
         requestQueue = Volley.newRequestQueue(getApplicationContext());
@@ -51,10 +47,7 @@ public class AddTrtaActivity extends AppCompatActivity {
     public void addTrta(View view){
         this.status.setText("Posting to " + url);
         try {
-            string_id= id.getText().toString();
-            koncni_id=Integer.parseInt(string_id);
             JSONObject jsonBody = new JSONObject();
-            jsonBody.put("trteId ", koncni_id);
             jsonBody.put("sorta", vrsta.getText());
 
             final String mRequestBody = jsonBody.toString();

@@ -23,19 +23,12 @@
         tools:ignore="MissingConstraints">
 
         <EditText
-            android:id="@+id/teID"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="number"
-            android:text="@string/id" />
-
-        <EditText
             android:id="@+id/teVrsta"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="textPersonName"
+            android:minHeight="48dp"
             android:text="@string/vrsta_trte" />
 
         <Button
