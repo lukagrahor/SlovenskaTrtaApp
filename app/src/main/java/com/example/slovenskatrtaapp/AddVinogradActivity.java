@@ -1,14 +1,14 @@
 package com.example.slovenskatrtaapp;
 
-import androidx.appcompat.app.AppCompatActivity;
-
+import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import android.content.Intent;
-import android.util.Log;
-import android.view.View;
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.android.volley.AuthFailureError;
 import com.android.volley.NetworkResponse;
 import com.android.volley.Request;
@@ -19,28 +19,35 @@ import com.android.volley.VolleyLog;
 import com.android.volley.toolbox.HttpHeaderParser;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+
 import org.json.JSONException;
 import org.json.JSONObject;
+
 import java.io.UnsupportedEncodingException;
 import java.util.HashMap;
 import java.util.Map;
 
-public class AddTrtaActivity extends AppCompatActivity {
+public class AddVinogradActivity extends AppCompatActivity {
     private TextView status;
     private EditText id;
-    private EditText vrsta;
+    private EditText povrsina;
+    private EditText st;
+    private EditText leto;
     String string_id;
     int koncni_id;
     public static final String EXTRA_MESSAGE = "slovenskatrtaapp.MESSAGE";
 
     private RequestQueue requestQueue;
-    private String url = "https://slovenskatrta-is.azurewebsites.net/api/v1/Trte";
+    private String url = "https://slovenskatrta-is.azurewebsites.net/api/v1/Vinogradi";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_add_trta);
-        vrsta = (EditText) findViewById(R.id.teTrteId);
+        setContentView(R.layout.activity_add_vinograd);
+        id = (EditText) findViewById(R.id.teTrteId);
+        povrsina = (EditText) findViewById(R.id.tePovrsina);
+        st = (EditText) findViewById(R.id.teStTrt);
+        leto = (EditText) findViewById(R.id.teLeto);
         status = (TextView) findViewById(R.id.status);
         requestQueue = Volley.newRequestQueue(getApplicationContext());
     }
@@ -49,7 +56,10 @@ public class AddTrtaActivity extends AppCompatActivity {
         this.status.setText("Posting to " + url);
         try {
             JSONObject jsonBody = new JSONObject();
-            jsonBody.put("sorta", vrsta.getText());
+            jsonBody.put("trteId", id.getText());
+            jsonBody.put("povrsina", povrsina.getText());
+            jsonBody.put("stTrt", st.getText());
+            jsonBody.put("letoMeritve", leto.getText());
 
             final String mRequestBody = jsonBody.toString();
 

@@ -5,4 +5,14 @@
     <string name="vrsta_trte">Vrsta trte</string>
     <string name="vnesi_vrsto_trte">Vnesi vrsto trte</string>
     <string name="textview">TextView</string>
+    <string name="nazaj">Nazaj</string>
+    <string name="prikazi_trte">prikazi_trte</string>
+    <string name="vnesi_trto">vnesi_trto</string>
+    <string name="prikazi_vinograde">prikazi_vinograde</string>
+    <string name="prikazi_vinograd">prikazi_vinograd</string>
+    <string name="vnesi_vinograd">/vnesi_vinograd</string>
+    <string name="vnesi_vinograd1">vnesi vinograde</string>
+    <string name="povrsina">Površina</string>
+    <string name="stevilo_trt">Število trt</string>
+    <string name="leto_meritve">Leto meritve</string>
 </resources>

@@ -28,7 +28,7 @@ import java.util.Map;
 public class MainActivity extends AppCompatActivity {
     private RequestQueue requestQueue;
     private TextView trte;
-    private String url = "https://slovenskatrta-is.azurewebsites.net/api/v1/Trte";
+    private String url;
     public static final String EXTRA_MESSAGE = "slovenskatrtaapp.MESSAGE";
 
     @Override
@@ -40,8 +40,27 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void prikaziTrte(View view) {
+        url = "https://slovenskatrta-is.azurewebsites.net/api/v1/Trte";
         if (view != null) {
             JsonArrayRequest request = new JsonArrayRequest(url, jsonArrayListener, errorListener)
+            {
+                @Override
+                public Map<String, String> getHeaders() throws AuthFailureError
+                {
+                    Map<String, String> params = new HashMap<String, String>();
+                    //parametri:  kaj isce    kljuc
+                    params.put("ApiKey","SecretKey");
+                    return params;
+                }
+            };
+            requestQueue.add(request);
+        }
+    }
+
+    public void prikaziVinograde(View view) {
+        url = "https://slovenskatrta-is.azurewebsites.net/api/v1/Vinogradi";
+        if (view != null) {
+            JsonArrayRequest request = new JsonArrayRequest(url, jsonArrayListenerVinograd, errorListener)
             {
                 @Override
                 public Map<String, String> getHeaders() throws AuthFailureError
@@ -86,6 +105,39 @@ public class MainActivity extends AppCompatActivity {
         }
     };
 
+    private Response.Listener<JSONArray> jsonArrayListenerVinograd = new Response.Listener<JSONArray>() {
+        @Override
+        public void onResponse(JSONArray response) {
+            ArrayList<String> data = new ArrayList<>();
+
+            for (int i = 0; i < response.length(); i++) {
+                try {
+                    JSONObject object = response.getJSONObject(i);
+                    String id = object.getString("vinogradiId");
+                    String id2 = object.getString("trteId");
+                    String povrsina = object.getString("povrsina");
+                    String st = object.getString("stTrt");
+                    String leto = object.getString("letoMeritve");
+
+                    data.add(id + " " + id2 + " " + povrsina + " " + st + " " + leto);
+
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                    return;
+
+                }
+
+                trte.setText("");
+
+                for (String row : data) {
+                    String currentText = trte.getText().toString();
+                    trte.setText(currentText + "\n\n" + row);
+                }
+
+            }
+        }
+    };
+
     private Response.ErrorListener errorListener = new Response.ErrorListener() {
         @Override
         public void onErrorResponse(VolleyError error) {
@@ -96,6 +148,13 @@ public class MainActivity extends AppCompatActivity {
     public void addTrtaActivity (View view) {
         Intent intent = new Intent(this,AddTrtaActivity.class);
         String message = "Dodaj trto v seznam.";
+        intent.putExtra(EXTRA_MESSAGE, message);
+        startActivity(intent);
+    }
+
+    public void addVinogradiActivity (View view) {
+        Intent intent = new Intent(this,AddVinogradActivity.class);
+        String message = "Dodaj vinograd v seznam.";
         intent.putExtra(EXTRA_MESSAGE, message);
         startActivity(intent);
     }
