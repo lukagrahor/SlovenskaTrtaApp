@@ -153,7 +153,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void addVinogradiActivity (View view) {
-        Intent intent = new Intent(this,AddVinogradActivity.class);
+        Intent intent = new Intent(this,AddVinogradiActivity.class);
         String message = "Dodaj vinograd v seznam.";
         intent.putExtra(EXTRA_MESSAGE, message);
         startActivity(intent);

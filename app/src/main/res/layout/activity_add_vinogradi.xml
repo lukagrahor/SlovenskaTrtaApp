@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AddVinogradActivity">
-
+    tools:context=".AddVinogradiActivity">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -78,4 +77,5 @@
             android:onClick="returnBack"
             android:text="@string/nazaj" />
     </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
