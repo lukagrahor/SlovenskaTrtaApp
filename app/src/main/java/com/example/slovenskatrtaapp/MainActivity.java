@@ -136,7 +136,7 @@ public class MainActivity extends AppCompatActivity {
                     String currentText = trte.getText().toString();
                     trte.setText(currentText + "\n\n" + row);
                 }
-
+                trte.setMovementMethod(new ScrollingMovementMethod());
             }
         }
     };
@@ -169,7 +169,7 @@ public class MainActivity extends AppCompatActivity {
                     String currentText = trte.getText().toString();
                     trte.setText(currentText + "\n\n" + row);
                 }
-
+                trte.setMovementMethod(new ScrollingMovementMethod());
             }
         }
     };
@@ -203,7 +203,7 @@ public class MainActivity extends AppCompatActivity {
                     String currentText = trte.getText().toString();
                     trte.setText(currentText + "\n\n" + row);
                 }
-
+                trte.setMovementMethod(new ScrollingMovementMethod());
             }
         }
     };
@@ -235,7 +235,7 @@ public class MainActivity extends AppCompatActivity {
                     String currentText = trte.getText().toString();
                     trte.setText(currentText + "\n\n" + row);
                 }
-
+                trte.setMovementMethod(new ScrollingMovementMethod());
             }
         }
     };
