@@ -29,8 +29,6 @@ public class AddTrtaActivity extends AppCompatActivity {
     private TextView status;
     private EditText id;
     private EditText vrsta;
-    String string_id;
-    int koncni_id;
     public static final String EXTRA_MESSAGE = "slovenskatrtaapp.MESSAGE";
 
     private RequestQueue requestQueue;
@@ -115,5 +113,6 @@ public class AddTrtaActivity extends AppCompatActivity {
         String message = "Vrni se nazaj.";
         intent.putExtra(EXTRA_MESSAGE, message);
         startActivity(intent);
+        finish();
     }
 }

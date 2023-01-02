@@ -16,4 +16,15 @@
     <string name="stevilo_trt">Število trt</string>
     <string name="leto_meritve">Leto meritve</string>
     <string name="id_trte">ID trte</string>
+    <string name="prikazi_trte2">prikazi trte</string>
+    <string name="prikazi_vinograde2">prikazi vinograde</string>
+    <string name="prik_vinograde">prik. vinograde</string>
+    <string name="vnesi_trto2">vnesi trto</string>
+    <string name="prikazi_pridelek">prikazi pridelek</string>
+    <string name="vnesi_pridelek">vnesi pridelek</string>
+    <string name="id_trte1">ID trte</string>
+    <string name="id_vinograda">ID vinograda</string>
+    <string name="koli_ina">Količina</string>
+    <string name="koli_ina_na_hektar">Količina na hektar</string>
+    <string name="t_kilogramov_na_trto">Št. kilogramov na trto</string>
 </resources>
