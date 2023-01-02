@@ -27,4 +27,10 @@
     <string name="koli_ina">Količina</string>
     <string name="koli_ina_na_hektar">Količina na hektar</string>
     <string name="t_kilogramov_na_trto">Št. kilogramov na trto</string>
+    <string name="prikazi_odkup">prikazi odkup</string>
+    <string name="vnesi_odkup">vnesi odkup</string>
+    <string name="id_pridelka">ID pridelka</string>
+    <string name="kolicina">Količina</string>
+    <string name="cena_na_kilogram">Cena na kilogram</string>
+    <string name="vnesi">Vnesi</string>
 </resources>

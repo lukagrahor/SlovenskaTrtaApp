@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-
     <TextView
         android:id="@+id/trte"
         android:layout_width="wrap_content"
@@ -47,14 +46,14 @@
         android:layout_height="38dp"
         android:layout_marginTop="16dp"
         android:layout_marginRight="2dp"
+        android:layout_marginEnd="12dp"
         android:onClick="addTrtaActivity"
         android:text="@string/vnesi_trto2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:layout_constraintRight_creator="1"
-        tools:layout_constraintTop_creator="1"
-        android:layout_marginEnd="12dp" />
+        tools:layout_constraintTop_creator="1" />
 
     <Button
         android:id="@+id/prikaziVinograde"
@@ -78,24 +77,25 @@
         android:layout_height="38dp"
         android:layout_marginTop="8dp"
         android:layout_marginRight="2dp"
+        android:layout_marginEnd="12dp"
         android:onClick="addVinogradiActivity"
         android:text="@string/vnesi_vinograd1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/addTrtaActivity"
         tools:layout_constraintRight_creator="1"
-        tools:layout_constraintTop_creator="1"
-        android:layout_marginEnd="12dp" />
+        tools:layout_constraintTop_creator="1" />
 
     <Button
         android:id="@+id/prikaziPridelek"
         android:layout_width="180dp"
         android:layout_height="38dp"
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="2dp"
         android:layout_marginTop="8dp"
         android:onClick="prikaziPridelek"
         android:text="@string/prikazi_pridelek"
-        app:layout_constraintEnd_toStartOf="@+id/addTrtaActivity"
-        app:layout_constraintHorizontal_bias="0.487"
+        app:layout_constraintEnd_toStartOf="@+id/addPridelek"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/prikaziVinograde"
@@ -107,13 +107,42 @@
         android:layout_width="180dp"
         android:layout_height="38dp"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
+        android:layout_marginRight="2dp"
+        android:layout_marginEnd="12dp"
         android:onClick="addPridelekActivity"
         android:text="@string/vnesi_pridelek"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/addVinogradiActivity2"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintTop_creator="1" />
+
+    <Button
+        android:id="@+id/prikaziOdkup"
+        android:layout_width="180dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="8dp"
+        android:onClick="prikaziOdkup"
+        android:text="@string/prikazi_odkup"
+        app:layout_constraintEnd_toStartOf="@+id/addOdkup"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/prikaziPridelek"
+        tools:layout_constraintLeft_creator="1"
+        tools:layout_constraintTop_creator="1" />
+
+    <Button
+        android:id="@+id/addOdkup"
+        android:layout_width="180dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginEnd="12dp"
+        android:onClick="addOdkupActivity"
+        android:text="@string/vnesi_odkup"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addPridelek"
         tools:layout_constraintRight_creator="1"
         tools:layout_constraintTop_creator="1" />
 

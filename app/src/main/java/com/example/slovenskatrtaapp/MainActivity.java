@@ -93,6 +93,24 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    public void prikaziOdkup(View view) {
+        url = "https://slovenskatrta-is.azurewebsites.net/api/v1/Odkup";
+        if (view != null) {
+            JsonArrayRequest request = new JsonArrayRequest(url, jsonArrayListenerOdkup, errorListener)
+            {
+                @Override
+                public Map<String, String> getHeaders() throws AuthFailureError
+                {
+                    Map<String, String> params = new HashMap<String, String>();
+                    //parametri:  kaj isce    kljuc
+                    params.put("ApiKey","SecretKey");
+                    return params;
+                }
+            };
+            requestQueue.add(request);
+        }
+    }
+
     private Response.Listener<JSONArray> jsonArrayListener = new Response.Listener<JSONArray>() {
         @Override
         public void onResponse(JSONArray response) {
@@ -190,6 +208,38 @@ public class MainActivity extends AppCompatActivity {
         }
     };
 
+    private Response.Listener<JSONArray> jsonArrayListenerOdkup = new Response.Listener<JSONArray>() {
+        @Override
+        public void onResponse(JSONArray response) {
+            ArrayList<String> data = new ArrayList<>();
+
+            for (int i = 0; i < response.length(); i++) {
+                try {
+                    JSONObject object = response.getJSONObject(i);
+                    String id = object.getString("pridelekId");
+                    String kolicina = object.getString("kolicina");
+                    String cenaNaKg = object.getString("cenaNaKg");
+                    String leto = object.getString("letoMeritve");
+
+                    data.add(id + " " + kolicina + " " + cenaNaKg + " " +leto);
+
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                    return;
+
+                }
+
+                trte.setText("");
+
+                for (String row : data) {
+                    String currentText = trte.getText().toString();
+                    trte.setText(currentText + "\n\n" + row);
+                }
+
+            }
+        }
+    };
+
     private Response.ErrorListener errorListener = new Response.ErrorListener() {
         @Override
         public void onErrorResponse(VolleyError error) {
@@ -216,6 +266,14 @@ public class MainActivity extends AppCompatActivity {
     public void addPridelekActivity (View view) {
         Intent intent = new Intent(this,AddPridelekActivity.class);
         String message = "Dodaj pridelek v seznam.";
+        intent.putExtra(EXTRA_MESSAGE, message);
+        startActivity(intent);
+        finish();
+    }
+
+    public void addOdkupActivity (View view) {
+        Intent intent = new Intent(this,AddOdkupActivity.class);
+        String message = "Dodaj odkup v seznam.";
         intent.putExtra(EXTRA_MESSAGE, message);
         startActivity(intent);
         finish();
