@@ -75,6 +75,24 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    public void prikaziPridelek(View view) {
+        url = "https://slovenskatrta-is.azurewebsites.net/api/v1/Pridelek";
+        if (view != null) {
+            JsonArrayRequest request = new JsonArrayRequest(url, jsonArrayListenerPridelek, errorListener)
+            {
+                @Override
+                public Map<String, String> getHeaders() throws AuthFailureError
+                {
+                    Map<String, String> params = new HashMap<String, String>();
+                    //parametri:  kaj isce    kljuc
+                    params.put("ApiKey","SecretKey");
+                    return params;
+                }
+            };
+            requestQueue.add(request);
+        }
+    }
+
     private Response.Listener<JSONArray> jsonArrayListener = new Response.Listener<JSONArray>() {
         @Override
         public void onResponse(JSONArray response) {
@@ -138,6 +156,40 @@ public class MainActivity extends AppCompatActivity {
         }
     };
 
+    private Response.Listener<JSONArray> jsonArrayListenerPridelek = new Response.Listener<JSONArray>() {
+        @Override
+        public void onResponse(JSONArray response) {
+            ArrayList<String> data = new ArrayList<>();
+
+            for (int i = 0; i < response.length(); i++) {
+                try {
+                    JSONObject object = response.getJSONObject(i);
+                    String id = object.getString("trteId");
+                    String id2 = object.getString("vinogradId");
+                    String kolicina = object.getString("kolicina");
+                    String hektar = object.getString("kolNaHa");
+                    String teza = object.getString("kgNaTrto");
+                    String leto = object.getString("letoMeritve");
+
+                    data.add(id + " " + id2 + " " + kolicina + " " + hektar + " " + teza + " " +leto);
+
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                    return;
+
+                }
+
+                trte.setText("");
+
+                for (String row : data) {
+                    String currentText = trte.getText().toString();
+                    trte.setText(currentText + "\n\n" + row);
+                }
+
+            }
+        }
+    };
+
     private Response.ErrorListener errorListener = new Response.ErrorListener() {
         @Override
         public void onErrorResponse(VolleyError error) {
@@ -150,6 +202,7 @@ public class MainActivity extends AppCompatActivity {
         String message = "Dodaj trto v seznam.";
         intent.putExtra(EXTRA_MESSAGE, message);
         startActivity(intent);
+        finish();
     }
 
     public void addVinogradiActivity (View view) {
@@ -157,5 +210,14 @@ public class MainActivity extends AppCompatActivity {
         String message = "Dodaj vinograd v seznam.";
         intent.putExtra(EXTRA_MESSAGE, message);
         startActivity(intent);
+        finish();
+    }
+
+    public void addPridelekActivity (View view) {
+        Intent intent = new Intent(this,AddPridelekActivity.class);
+        String message = "Dodaj pridelek v seznam.";
+        intent.putExtra(EXTRA_MESSAGE, message);
+        startActivity(intent);
+        finish();
     }
 }

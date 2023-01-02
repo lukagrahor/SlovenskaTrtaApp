@@ -12,7 +12,7 @@
         android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:layout_marginLeft="156dp"
-        android:layout_marginTop="65dp"
+        android:layout_marginTop="150dp"
         android:layout_marginEnd="156dp"
         android:layout_marginRight="156dp"
         android:layout_marginBottom="10dp"
@@ -33,7 +33,7 @@
         android:layout_marginLeft="2dp"
         android:layout_marginTop="16dp"
         android:onClick="prikaziTrte"
-        android:text="@string/prikazi_trte"
+        android:text="@string/prikazi_trte2"
         app:layout_constraintEnd_toStartOf="@+id/addTrtaActivity"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -48,7 +48,7 @@
         android:layout_marginTop="16dp"
         android:layout_marginRight="2dp"
         android:onClick="addTrtaActivity"
-        android:text="@string/vnesi_trto"
+        android:text="@string/vnesi_trto2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -64,7 +64,7 @@
         android:layout_marginLeft="2dp"
         android:layout_marginTop="8dp"
         android:onClick="prikaziVinograde"
-        android:text="@string/prikazi_vinograd"
+        android:text="@string/prik_vinograde"
         app:layout_constraintEnd_toStartOf="@+id/addVinogradiActivity2"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -86,4 +86,35 @@
         tools:layout_constraintRight_creator="1"
         tools:layout_constraintTop_creator="1"
         android:layout_marginEnd="12dp" />
+
+    <Button
+        android:id="@+id/prikaziPridelek"
+        android:layout_width="180dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="8dp"
+        android:onClick="prikaziPridelek"
+        android:text="@string/prikazi_pridelek"
+        app:layout_constraintEnd_toStartOf="@+id/addTrtaActivity"
+        app:layout_constraintHorizontal_bias="0.487"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/prikaziVinograde"
+        tools:layout_constraintLeft_creator="1"
+        tools:layout_constraintTop_creator="1" />
+
+    <Button
+        android:id="@+id/addPridelek"
+        android:layout_width="180dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:onClick="addPridelekActivity"
+        android:text="@string/vnesi_pridelek"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addVinogradiActivity2"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintTop_creator="1" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

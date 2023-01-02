@@ -40,7 +40,7 @@
             android:text="@string/povrsina" />
 
         <EditText
-            android:id="@+id/teStTrt"
+            android:id="@+id/teSteviloTrt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -49,7 +49,7 @@
             android:text="@string/stevilo_trt" />
 
         <EditText
-            android:id="@+id/teLeto"
+            android:id="@+id/teLetoMeritve"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -61,7 +61,7 @@
             android:id="@+id/submit"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:onClick="addTrta"
+            android:onClick="addVinograd"
             android:text="@string/vnesi_vrsto_trte" />
 
         <TextView

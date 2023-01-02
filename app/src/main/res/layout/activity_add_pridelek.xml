@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AddVinogradActivity">
-
+    tools:context=".AddPridelekActivity">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -29,28 +28,46 @@
             android:ems="10"
             android:inputType="textPersonName"
             android:minHeight="48dp"
-            android:text="@string/id_trte" />
+            android:text="@string/id_trte1" />
 
         <EditText
-            android:id="@+id/tePovrsina"
+            android:id="@+id/teVinogradId"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="textPersonName"
             android:minHeight="48dp"
-            android:text="@string/povrsina" />
+            android:text="@string/id_vinograda" />
 
         <EditText
-            android:id="@+id/teStTrt"
+            android:id="@+id/teKolicina"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="textPersonName"
             android:minHeight="48dp"
-            android:text="@string/stevilo_trt" />
+            android:text="@string/koli_ina" />
 
         <EditText
-            android:id="@+id/teLeto"
+            android:id="@+id/teKolNaHa"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:minHeight="48dp"
+            android:text="@string/koli_ina_na_hektar" />
+
+        <EditText
+            android:id="@+id/teKgNaTrto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:minHeight="48dp"
+            android:text="@string/t_kilogramov_na_trto" />
+
+        <EditText
+            android:id="@+id/teLetoMeritve"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -62,7 +79,7 @@
             android:id="@+id/submit"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:onClick="addTrta"
+            android:onClick="addPridelek"
             android:text="@string/vnesi_vrsto_trte" />
 
         <TextView
@@ -78,4 +95,5 @@
             android:onClick="returnBack"
             android:text="@string/nazaj" />
     </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

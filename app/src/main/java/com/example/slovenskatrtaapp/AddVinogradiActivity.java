@@ -34,8 +34,6 @@ public class AddVinogradiActivity extends AppCompatActivity {
     private EditText povrsina;
     private EditText st;
     private EditText leto;
-    String string_id;
-    int koncni_id;
     public static final String EXTRA_MESSAGE = "slovenskatrtaapp.MESSAGE";
 
     private RequestQueue requestQueue;
@@ -47,13 +45,13 @@ public class AddVinogradiActivity extends AppCompatActivity {
         setContentView(R.layout.activity_add_vinogradi);
         id = (EditText) findViewById(R.id.teTrteId);
         povrsina = (EditText) findViewById(R.id.tePovrsina);
-        st = (EditText) findViewById(R.id.teStTrt);
-        leto = (EditText) findViewById(R.id.teLeto);
+        st = (EditText) findViewById(R.id.teSteviloTrt);
+        leto = (EditText) findViewById(R.id.teLetoMeritve);
         status = (TextView) findViewById(R.id.status);
         requestQueue = Volley.newRequestQueue(getApplicationContext());
     }
 
-    public void addTrta(View view){
+    public void addVinograd(View view){
         this.status.setText("Posting to " + url);
         try {
             JSONObject jsonBody = new JSONObject();
@@ -125,5 +123,6 @@ public class AddVinogradiActivity extends AppCompatActivity {
         String message = "Vrni se nazaj.";
         intent.putExtra(EXTRA_MESSAGE, message);
         startActivity(intent);
+        finish();
     }
 }
