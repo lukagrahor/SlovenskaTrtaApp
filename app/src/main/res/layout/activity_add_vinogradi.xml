@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AddTrtaActivity">
-
+    tools:context=".AddVinogradiActivity">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -29,7 +28,34 @@
             android:ems="10"
             android:inputType="textPersonName"
             android:minHeight="48dp"
-            android:text="@string/vrsta_trte" />
+            android:text="@string/id_trte" />
+
+        <EditText
+            android:id="@+id/tePovrsina"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:minHeight="48dp"
+            android:text="@string/povrsina" />
+
+        <EditText
+            android:id="@+id/teStTrt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:minHeight="48dp"
+            android:text="@string/stevilo_trt" />
+
+        <EditText
+            android:id="@+id/teLeto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:minHeight="48dp"
+            android:text="@string/leto_meritve" />
 
         <Button
             android:id="@+id/submit"
@@ -51,4 +77,5 @@
             android:onClick="returnBack"
             android:text="@string/nazaj" />
     </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
