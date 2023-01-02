@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AddTrtaActivity">
+    tools:context=".AddTrtaActivity"
+    android:background="@drawable/trtevsloveniji">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -29,7 +30,9 @@
             android:ems="10"
             android:inputType="textPersonName"
             android:minHeight="48dp"
-            android:text="@string/vrsta_trte" />
+            android:text="@string/vrsta_trte"
+            android:textColor="#FFFFFF"
+            android:background="#A63663AD" />
 
         <Button
             android:id="@+id/submit"
@@ -42,7 +45,9 @@
             android:id="@+id/status"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/textview" />
+            android:text="@string/sporo_ilo"
+            android:textColor="#FFFFFF"
+            android:background="#A63663AD" />
 
         <Button
             android:id="@+id/addMainActivity"

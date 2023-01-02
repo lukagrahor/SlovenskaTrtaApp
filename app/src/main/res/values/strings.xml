@@ -33,4 +33,8 @@
     <string name="kolicina">Količina</string>
     <string name="cena_na_kilogram">Cena na kilogram</string>
     <string name="vnesi">Vnesi</string>
+    <string name="sporo_ilo">Sporočilo</string>
+    <string name="sporocilo">Sporočilo</string>
+    <string name="sporocilo2">Sporočilo</string>
+    <string name="sporocilo3">Sporočilo</string>
 </resources>
