@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AddPridelekActivity">
+    tools:context=".AddPridelekActivity"
+    android:background="@drawable/trtevsloveniji">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -28,7 +29,10 @@
             android:ems="10"
             android:inputType="textPersonName"
             android:minHeight="48dp"
-            android:text="@string/id_trte1" />
+            android:text="@string/id_trte1"
+            android:textColor="#FFFFFF"
+            android:layout_marginTop="5dp"
+            android:background="#A63663AD" />
 
         <EditText
             android:id="@+id/teVinogradId"
@@ -37,7 +41,10 @@
             android:ems="10"
             android:inputType="textPersonName"
             android:minHeight="48dp"
-            android:text="@string/id_vinograda" />
+            android:text="@string/id_vinograda"
+            android:textColor="#FFFFFF"
+            android:layout_marginTop="5dp"
+            android:background="#A63663AD" />
 
         <EditText
             android:id="@+id/teKolicina"
@@ -46,7 +53,10 @@
             android:ems="10"
             android:inputType="textPersonName"
             android:minHeight="48dp"
-            android:text="@string/koli_ina" />
+            android:text="@string/koli_ina"
+            android:textColor="#FFFFFF"
+            android:layout_marginTop="5dp"
+            android:background="#A63663AD" />
 
         <EditText
             android:id="@+id/teKolNaHa"
@@ -55,7 +65,10 @@
             android:ems="10"
             android:inputType="textPersonName"
             android:minHeight="48dp"
-            android:text="@string/koli_ina_na_hektar" />
+            android:text="@string/koli_ina_na_hektar"
+            android:textColor="#FFFFFF"
+            android:layout_marginTop="5dp"
+            android:background="#A63663AD" />
 
         <EditText
             android:id="@+id/teKgNaTrto"
@@ -64,7 +77,10 @@
             android:ems="10"
             android:inputType="textPersonName"
             android:minHeight="48dp"
-            android:text="@string/t_kilogramov_na_trto" />
+            android:text="@string/t_kilogramov_na_trto"
+            android:textColor="#FFFFFF"
+            android:layout_marginTop="5dp"
+            android:background="#A63663AD" />
 
         <EditText
             android:id="@+id/teLetoMeritve"
@@ -73,7 +89,10 @@
             android:ems="10"
             android:inputType="textPersonName"
             android:minHeight="48dp"
-            android:text="@string/leto_meritve" />
+            android:text="@string/leto_meritve"
+            android:textColor="#FFFFFF"
+            android:layout_marginTop="5dp"
+            android:background="#A63663AD" />
 
         <Button
             android:id="@+id/submit"
@@ -86,7 +105,10 @@
             android:id="@+id/status"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/textview" />
+            android:text="@string/sporocilo3"
+            android:textColor="#FFFFFF"
+            android:layout_marginTop="5dp"
+            android:background="#A63663AD" />
 
         <Button
             android:id="@+id/addMainActivity"

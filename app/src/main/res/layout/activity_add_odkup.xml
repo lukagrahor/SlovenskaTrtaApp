@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AddOdkupActivity">
+    tools:context=".AddOdkupActivity"
+    android:background="@drawable/trtevsloveniji">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -28,7 +29,9 @@
             android:ems="10"
             android:inputType="textPersonName"
             android:minHeight="48dp"
-            android:text="@string/id_pridelka" />
+            android:text="@string/id_pridelka"
+            android:textColor="#FFFFFF"
+            android:background="#A63663AD" />
 
         <EditText
             android:id="@+id/teKolicina"
@@ -37,7 +40,10 @@
             android:ems="10"
             android:inputType="textPersonName"
             android:minHeight="48dp"
-            android:text="@string/kolicina" />
+            android:text="@string/kolicina"
+            android:textColor="#FFFFFF"
+            android:layout_marginTop="5dp"
+            android:background="#A63663AD" />
 
         <EditText
             android:id="@+id/teCenaNaKg"
@@ -46,7 +52,10 @@
             android:ems="10"
             android:inputType="textPersonName"
             android:minHeight="48dp"
-            android:text="@string/cena_na_kilogram" />
+            android:text="@string/cena_na_kilogram"
+            android:textColor="#FFFFFF"
+            android:layout_marginTop="5dp"
+            android:background="#A63663AD" />
 
         <EditText
             android:id="@+id/teLetoMeritve"
@@ -55,7 +64,10 @@
             android:ems="10"
             android:inputType="textPersonName"
             android:minHeight="48dp"
-            android:text="@string/leto_meritve" />
+            android:text="@string/leto_meritve"
+            android:textColor="#FFFFFF"
+            android:layout_marginTop="5dp"
+            android:background="#A63663AD" />
 
         <Button
             android:id="@+id/submit"
@@ -68,7 +80,10 @@
             android:id="@+id/status"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/textview" />
+            android:text="@string/textview"
+            android:textColor="#FFFFFF"
+            android:layout_marginTop="5dp"
+            android:background="#A63663AD" />
 
         <Button
             android:id="@+id/addMainActivity"

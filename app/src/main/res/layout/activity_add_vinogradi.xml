@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AddVinogradiActivity">
+    tools:context=".AddVinogradiActivity"
+    android:background="@drawable/trtevsloveniji">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -25,37 +26,48 @@
             android:id="@+id/teTrteId"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="#A63663AD"
             android:ems="10"
             android:inputType="textPersonName"
             android:minHeight="48dp"
-            android:text="@string/id_trte" />
+            android:text="@string/id_trte"
+            android:textColor="#FFFFFF" />
 
         <EditText
             android:id="@+id/tePovrsina"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="#A63663AD"
             android:ems="10"
             android:inputType="textPersonName"
             android:minHeight="48dp"
-            android:text="@string/povrsina" />
+            android:text="@string/povrsina"
+            android:textColor="#FFFFFF" />
 
         <EditText
             android:id="@+id/teSteviloTrt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="#A63663AD"
             android:ems="10"
             android:inputType="textPersonName"
             android:minHeight="48dp"
-            android:text="@string/stevilo_trt" />
+            android:text="@string/stevilo_trt"
+            android:textColor="#FFFFFF" />
 
         <EditText
             android:id="@+id/teLetoMeritve"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="#A63663AD"
             android:ems="10"
             android:inputType="textPersonName"
             android:minHeight="48dp"
-            android:text="@string/leto_meritve" />
+            android:text="@string/leto_meritve"
+            android:textColor="#FFFFFF" />
 
         <Button
             android:id="@+id/submit"
@@ -68,7 +80,9 @@
             android:id="@+id/status"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/textview" />
+            android:background="#A63663AD"
+            android:text="@string/sporocilo2"
+            android:textColor="#FFFFFF" />
 
         <Button
             android:id="@+id/addMainActivity"
