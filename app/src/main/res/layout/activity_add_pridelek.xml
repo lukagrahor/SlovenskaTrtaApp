@@ -99,7 +99,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="addPridelek"
-            android:text="@string/vnesi_vrsto_trte" />
+            android:text="@string/vnesi_vrsto_trte"
+            android:textColor="#FFFFFF" />
 
         <TextView
             android:id="@+id/status"
@@ -115,7 +116,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="returnBack"
-            android:text="@string/nazaj" />
+            android:text="@string/nazaj"
+            android:textColor="#FFFFFF" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
